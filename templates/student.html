@@ -12,6 +12,8 @@
 	Finished Lab: {{student.finished_lab}}
 	</p>
     <p><a href="{{url_for('home')}}">Home</a></p>
-
+    <form action="/delete/{{student.student_id}}">
+    	<input type="submit" name="delete" value="delete">
+    </form>
 </body>
 </html>
