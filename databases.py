@@ -69,3 +69,8 @@ def query_by_id(student_id):
     student = session.query(Student).filter_by(
         student_id=student_id).first()
     return student
+
+def update_lab_status_by_id(student_id, finished_lab):
+	student_object = session.query(Student).filter_by(student_id = student_id).first()
+	student_object.finished_lab = finished_lab
+	session.commit

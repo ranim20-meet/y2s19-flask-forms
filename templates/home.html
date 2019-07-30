@@ -13,8 +13,8 @@
     <p>
 	    Name: <a href="{{url_for('display_student', student_id=student.student_id)}}">{{student.name}}</a><br>
 	    Class: {{student.year}}<br>
-	    Finished Lab: {{student.finished_lab}}
-        <a href="{{url_for()}}"></a>
+	    Finished Lab: {{student.finished_lab}} <br>
+        <a href="{{ url_for('update_lab', student_id = student.student_id) }}">Update lab status</a>
     </p>
     {% endfor %}
 

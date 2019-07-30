@@ -5,8 +5,11 @@
 </head>
 <body>
 	<h1> Change finished_lab status </h1>
-	<form>
-		<input type="text" name="did_finish_lab" placeholder="Did {{student.name}} finish the lab?">
+	<form action="/updatelabstatus/{{student.student_id}}" method="post">
+		<p>Did {{student.name}} finish the lab?</p>
+		<input type="radio" name="didfinish" value = "yes">Yes<br>
+		<input type="radio" name="didfinish" value = "no">No<br>
+		<input type="submit" name="submit" value="submit">
 	</form>
 </body>
 </html>
